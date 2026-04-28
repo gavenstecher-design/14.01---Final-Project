@@ -26,7 +26,6 @@ router.post('/create', function (req, res, next) {
           return res.status(500).send('Error adding todo');
         }
         console.log('Todo added successfully:', results);
-        // Redirect to the home page after adding
         res.redirect('/');
       });
     } catch (error) {
@@ -44,7 +43,6 @@ router.post('/delete', function (req, res, next) {
           return res.status(500).send('Error deleting todo');
         }
         console.log('Todo deleted successfully:', results);
-        // Redirect to the home page after deletion
         res.redirect('/');
     });
     }catch (error) {
@@ -52,5 +50,18 @@ router.post('/delete', function (req, res, next) {
         res.status(500).send('Error deleting todo:');
     }
 });
+
+router.get('/menu', function(req, res) {
+  res.render('menu', { title: 'Menu' });
+});
+
+router.get('/about', function(req, res) {
+  res.render('about', { title: 'About Us' });
+});
+
+router.get('/comments', function(req, res) {
+  res.render('comments', { title: 'Customer Comments' });
+});
+
 
 module.exports = router;
