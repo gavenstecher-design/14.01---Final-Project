@@ -1,5 +1,23 @@
 extends layout
 
 block content
-  h1 Customer Comments
-  p This is where comments will go.
+  main
+    h1 Customer Comments
+
+    form(method="POST", action="/comments")
+      input(type="text", name="name", placeholder="Your name", required)
+      br
+      textarea(name="comment", placeholder="Your comment", required)
+      br
+      button(type="submit") Submit
+
+    hr
+
+    if comments && comments.length
+      each c in comments
+        div(style="border:1px solid #ccc; padding:10px; margin-bottom:10px;")
+          strong= c.name
+          p= c.comment
+          small= c.created_at
+    else
+      p No comments yet

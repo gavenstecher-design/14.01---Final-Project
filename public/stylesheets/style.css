@@ -13,3 +13,21 @@ nav a {
 nav a:hover {
   color: #F7C64A;
 }
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #F7F7F7;
+}
+
+h1 {
+  color: #10291D;
+  text-align: center;
+  margin-top: 20px;
+  font-family: 'Italianno', cursive;
+  font-size: 3rem;
+}
+
+main {
+  padding: 20px;
+}
