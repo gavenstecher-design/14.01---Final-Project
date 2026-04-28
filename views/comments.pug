@@ -4,20 +4,35 @@ block content
   main
     h1 Customer Comments
 
+    if error
+      p.error-message= error
+
     form(method="POST", action="/comments")
-      input(type="text", name="name", placeholder="Your name", required)
-      br
-      textarea(name="comment", placeholder="Your comment", required)
-      br
-      button(type="submit") Submit
+      label(for="name") Name
+      input(type="text", name="name", id="name", maxlength="100", required)
+
+      label(for="comment") Comment
+      textarea(name="comment", id="comment", maxlength="500", required)
+
+      button(type="submit") Submit Comment
 
     hr
 
     if comments && comments.length
       each c in comments
-        div(style="border:1px solid #ccc; padding:10px; margin-bottom:10px;")
-          strong= c.name
+        article.comment-card
+          h2= c.name
           p= c.comment
-          small= c.created_at
+          small= c.formatted_date
     else
       p No comments yet
+
+    if totalPages > 1
+      nav.pagination
+        if page > 1
+          a(href=`/comments?page=${page - 1}`) Previous
+
+        span Page #{page} of #{totalPages}
+
+        if page < totalPages
+          a(href=`/comments?page=${page + 1}`) Next

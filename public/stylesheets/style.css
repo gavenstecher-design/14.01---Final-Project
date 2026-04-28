@@ -31,3 +31,76 @@ h1 {
 main {
   padding: 20px;
 }
+
+form {
+  max-width: 500px;
+  margin: 0 auto 25px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border: 1px solid #10291D;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+button {
+  background-color: #F7C64A;
+  color: #10291D;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e0ae2d;
+}
+
+.comment-card {
+  max-width: 700px;
+  margin: 15px auto;
+  padding: 15px;
+  background-color: white;
+  border-left: 5px solid #F7C64A;
+  border-radius: 8px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.comment-card h2 {
+  margin: 0;
+  color: #10291D;
+}
+
+.error-message {
+  max-width: 500px;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: #fff3cd;
+  border-left: 5px solid #F7C64A;
+}
+
+.pagination {
+  text-align: center;
+  margin: 20px;
+}
+
+.pagination a,
+.pagination span {
+  margin: 0 10px;
+}
+
+.comment-card p {
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
