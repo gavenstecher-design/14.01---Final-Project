@@ -1,8 +1,15 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+nav {
+  background-color: #10291D;
+  padding: 10px;
 }
 
-a {
-  color: #00B7FF;
+nav a {
+  color: #F7F7F7;
+  margin-right: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #F7C64A;
 }
