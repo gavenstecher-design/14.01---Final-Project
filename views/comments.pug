@@ -14,7 +14,8 @@ block content
       label(for="comment") Comment
       textarea(name="comment", id="comment", maxlength="500", required)
 
-      button(type="submit") Submit Comment
+      button(type="submit" onclick="this.disabled=true; this.form.submit();")
+        Submit Comment
 
     hr
 

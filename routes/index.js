@@ -80,7 +80,7 @@ router.get('/comments', function(req, res) {
     const totalPages = Math.ceil(totalComments / limit) || 1;
 
     req.db.query(
-      'SELECT *, DATE_FORMAT(created_at, "%M %d, %Y at %h:%i %p") AS formatted_date FROM comments ORDER BY created_at DESC LIMIT ? OFFSET ?',
+      'SELECT *, DATE_FORMAT(CONVERT_TZ(created_at, "+00:00", "-06:00"), "%M %d, %Y at %h:%i %p") AS formatted_date FROM comments ORDER BY created_at DESC LIMIT ? OFFSET ?',
       [limit, offset],
       (err, results) => {
         if (err) {
