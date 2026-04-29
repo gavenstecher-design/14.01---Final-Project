@@ -285,3 +285,41 @@ button:hover {
 .about-card h2 {
   color: #10291D;
 }
+
+.menu-page,
+.about-page,
+main:has(.comment-card),
+main:has(form[action="/comments"]) {
+  background: linear-gradient(180deg, #F7F7F7 0%, #fff4cf 100%);
+  border-radius: 14px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.menu-section,
+.about-content,
+.comment-card,
+form {
+  box-shadow: 0 4px 12px rgba(16, 41, 29, 0.12);
+}
+
+.menu-section h2 {
+  background-color: #10291D;
+  color: #F7C64A;
+  padding: 12px;
+  border-radius: 8px;
+  border-bottom: none;
+}
+
+.menu-item,
+.about-card,
+.comment-card {
+  background-color: #fffaf0;
+}
+
+form {
+  background-color: #fffaf0;
+  padding: 20px;
+  border-left: 5px solid #F7C64A;
+  border-radius: 10px;
+}
