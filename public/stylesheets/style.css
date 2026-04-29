@@ -323,3 +323,17 @@ form {
   border-left: 5px solid #F7C64A;
   border-radius: 10px;
 }
+
+.menu-item:hover,
+.about-card:hover,
+.comment-card:hover {
+  transform: translateY(-4px);
+  transition: 0.2s;
+  box-shadow: 0 8px 18px rgba(16, 41, 29, 0.2);
+}
+
+.menu-section,
+.about-content,
+main {
+  padding: 20px;
+}
