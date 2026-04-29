@@ -337,3 +337,11 @@ form {
 main {
   padding: 20px;
 }
+
+.comments-wrapper {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: #10291D;
+  border-radius: 14px;
+}

@@ -18,14 +18,15 @@ block content
 
     hr
 
-    if comments && comments.length
-      each c in comments
-        article.comment-card
-          h2= c.name
-          p= c.comment
-          small= c.formatted_date
-    else
-      p No comments yet
+    section.comments-wrapper
+      if comments && comments.length
+        each c in comments
+          article.comment-card
+            h2= c.name
+            p= c.comment
+            small= c.formatted_date
+      else
+        p No comments yet
 
     if totalPages > 1
       nav.pagination
