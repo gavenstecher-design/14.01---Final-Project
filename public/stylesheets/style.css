@@ -183,3 +183,65 @@ button:hover {
     grid-template-columns: 1fr;
   }
 }
+
+.menu-page {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.menu-section {
+  margin: 40px 0;
+}
+
+.menu-section h2 {
+  color: #10291D;
+  border-bottom: 3px solid #F7C64A;
+  padding-bottom: 8px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.menu-item {
+  background-color: white;
+  padding: 18px;
+  border-radius: 10px;
+  border-left: 5px solid #F7C64A;
+}
+
+.menu-item h3 {
+  margin-top: 0;
+  color: #10291D;
+}
+
+.menu-item p {
+  line-height: 1.4;
+}
+
+.menu-item strong {
+  display: block;
+  margin-top: 5px;
+  color: #10291D;
+  font-weight: bold;
+}
+
+.order-box {
+  text-align: center;
+  background-color: #10291D;
+  color: #F7F7F7;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.order-box h2 {
+  color: #F7C64A;
+}
+
+@media (max-width: 800px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
