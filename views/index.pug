@@ -1,23 +1,26 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  ol
-  each val in todos
-    li
-      span= val.task + ' - '
-      if val.completed > 0
-        span Completed
-      else
-        span Not Completed
-      form(method='POST' action='/delete')
-        input(type='hidden', name='id', value=val.id)
-        button(type='submit') Delete
+  main.homepage
+    section.hero
+      div.hero-text
+        h1 Downtown Donuts
+        p.family Family-Owned Since 1992
+        p Fresh donuts, locally roasted coffee, and a cozy downtown spot made for mornings.
 
-  hr
-  h2 Add a new task
-  form(method='POST' action='/create')
-    label(for='task') Task:
-    input(type='text', name='task', id='task', required)
-    button(type='submit') Create Task
+        div.hero-buttons
+          a.button(href="/menu") View Menu
+          a.button.secondary(href="/comments") Leave a Comment
+
+    section.home-info
+      article.info-card
+        h2 Fresh Daily
+        p Handcrafted donuts made every morning.
+
+      article.info-card
+        h2 Order Online
+        p UberEats, DoorDash, and GrubHub available.
+
+      article.info-card
+        h2 Visit Us
+        p 123 Main Street, Downtown

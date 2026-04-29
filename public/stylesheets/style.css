@@ -104,3 +104,82 @@ button:hover {
   line-height: 1.5;
   white-space: pre-wrap;
 }
+
+.hero {
+  min-height: 70vh;
+  background-color: #10291D;
+  color: #F7F7F7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero h1 {
+  color: #F7C64A;
+  font-size: 5rem;
+  margin-bottom: 0;
+}
+
+.family {
+  color: #F7C64A;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.hero-text p {
+  max-width: 600px;
+  margin: 15px auto;
+  font-size: 1.2rem;
+}
+
+.hero-buttons {
+  margin-top: 25px;
+}
+
+.button {
+  display: inline-block;
+  background-color: #F7C64A;
+  color: #10291D;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.button.secondary {
+  background-color: #F7F7F7;
+}
+
+.home-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.info-card {
+  background-color: white;
+  padding: 25px;
+  border-left: 5px solid #F7C64A;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.info-card h2 {
+  color: #10291D;
+}
+
+@media (max-width: 700px) {
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .home-info {
+    grid-template-columns: 1fr;
+  }
+}
