@@ -381,3 +381,82 @@ main:has(form[action="/comments"])::after {
   border-right: 5px solid #10291D;
   border-radius: 0 0 6px 0;
 }
+
+/* ===== MOBILE RESPONSIVENESS ===== */
+@media (max-width: 700px) {
+  nav {
+    text-align: center;
+    padding: 15px 8px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 6px 8px;
+  }
+
+  main {
+    padding: 12px;
+  }
+
+  h1 {
+    font-size: 2.6rem;
+  }
+
+  .hero {
+    min-height: 55vh;
+    padding: 30px 15px;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .hero-buttons .button,
+  .button {
+    display: block;
+    width: fit-content;
+    margin: 10px auto;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-page,
+  .about-page,
+  main:has(form[action="/comments"]) {
+    border-width: 2px;
+    padding: 14px;
+  }
+
+  .menu-page::before,
+  .about-page::before,
+  main:has(form[action="/comments"])::before,
+  .menu-page::after,
+  .about-page::after,
+  main:has(form[action="/comments"])::after {
+    display: none;
+  }
+
+  form {
+    max-width: 100%;
+  }
+
+  .comments-wrapper {
+    padding: 14px;
+  }
+
+  .comment-card {
+    padding: 12px;
+  }
+
+  .pagination a,
+  .pagination span {
+    display: block;
+    margin: 8px 0;
+  }
+}
