@@ -1,40 +1,45 @@
 extends layout
 
 block content
-  main
-    h1 Customer Comments
+  .main-with-logos
+    img.side-logo.left(src="/images/lightLogo.png" alt="Downtown Donuts logo")
 
-    if error
-      p.error-message= error
+    main
+      h1 Customer Comments
 
-    form(method="POST", action="/comments")
-      label(for="name") Name
-      input(type="text", name="name", id="name", maxlength="100", required)
+      if error
+        p.error-message= error
 
-      label(for="comment") Comment
-      textarea(name="comment", id="comment", maxlength="500", required)
+      form(method="POST", action="/comments")
+        label(for="name") Name
+        input(type="text", name="name", id="name", maxlength="100", required)
 
-      button(type="submit" onclick="this.disabled=true; this.form.submit();")
-        Submit Comment
+        label(for="comment") Comment
+        textarea(name="comment", id="comment", maxlength="500", required)
 
-    hr
+        button(type="submit" onclick="this.disabled=true; this.form.submit();")
+          Submit Comment
 
-    section.comments-wrapper
-      if comments && comments.length
-        each c in comments
-          article.comment-card
-            h2= c.name
-            p= c.comment
-            small= c.formatted_date
-      else
-        p No comments yet
+      hr
 
-    if totalPages > 1
-      nav.pagination
-        if page > 1
-          a(href=`/comments?page=${page - 1}`) Previous
+      section.comments-wrapper
+        if comments && comments.length
+          each c in comments
+            article.comment-card
+              h2= c.name
+              p= c.comment
+              small= c.formatted_date
+        else
+          p No comments yet
 
-        span Page #{page} of #{totalPages}
+      if totalPages > 1
+        nav.pagination
+          if page > 1
+            a(href=`/comments?page=${page - 1}`) Previous
 
-        if page < totalPages
-          a(href=`/comments?page=${page + 1}`) Next
+          span Page #{page} of #{totalPages}
+
+          if page < totalPages
+            a(href=`/comments?page=${page + 1}`) Next
+
+    img.side-logo.right(src="/images/lightLogo.png" alt="Downtown Donuts logo")

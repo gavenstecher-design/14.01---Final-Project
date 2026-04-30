@@ -472,3 +472,47 @@ main:has(form[action="/comments"])::after {
     width: 220px;
   }
 }
+
+.main-with-logos {
+  position: relative;
+}
+
+.side-logo {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 140px;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.side-logo.left {
+  left: 10px;
+}
+
+.side-logo.right {
+  right: 10px;
+}
+
+@media (max-width: 900px) {
+  .side-logo {
+    display: none;
+  }
+}
+
+.side-logo {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 180px;
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 2;   /* 👈 ADD THIS */
+}
+
+.menu-page,
+.about-page,
+main {
+  position: relative;
+  z-index: 1;
+}
