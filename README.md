@@ -3,7 +3,7 @@
 # Downtown Donuts Website Redesign
 
 ## Overview
-This was a full-stack web application for our CS208 final project. We were tasked with creating a website for Downtown Donuts that had a landing page, menu, about page, and a functional comments page. We ahd to o this whiel keeping the website feelign cozy with a modern design. 
+This was a full-stack web application for our CS208 final project. We were tasked with creating a website for Downtown Donuts that had a landing page, menu, about page, and a functional comments page. We had to do this while keeping the website feelign cozy with a modern design. 
 
 ## Setup Instructions
 
