@@ -522,3 +522,8 @@ main {
 .pagination a {
   color: #F7C64A; 
 }
+
+.comments-wrapper p:only-child {
+  color: #F7F7F7;
+  text-align: center;
+}
