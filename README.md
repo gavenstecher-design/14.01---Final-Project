@@ -12,17 +12,44 @@ This was a full-stack web application for our CS208 final project. We were taske
 
 ## run these in the terminal
  
-2. Install dependencies: npm install
+## Setup Instructions
 
-3. Start the database: sudo service mariadb start
+2. Install Node dependencies:
 
-4. Set up the database: sudo mysql -u root -p < ./setup_scripts/create_demo_table.sql
+npm install
 
-5. Set password: 12345
+3. Install and configure MariaDB. This only needs to be done once per Codespace:
 
-6. Run the server: npm start
+./setup_scripts/install_db.sh
 
-7. Open in browser: http://localhost:3000
+When prompted, use these answers:
+- Switch to unix_socket authentication: n
+- Change the root password: Y
+- Set password: 12345
+- Remove anonymous users: Y
+- Disallow root login remotely: Y
+- Remove test database: Y
+- Reload privilege tables: Y
+
+4. Start MariaDB:
+
+sudo service mariadb start
+
+5. Create the database and tables:
+
+sudo mysql -u root -p < ./setup_scripts/create_demo_table.sql
+
+When prompted for the password, enter:
+
+12345
+
+6. Start the application:
+
+npm start
+
+7. Open the site in the browser:
+
+http://localhost:3000
 
 
 ## Design Decisions
