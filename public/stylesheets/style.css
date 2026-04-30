@@ -288,13 +288,6 @@ button:hover {
 
 .menu-page,
 .about-page,
-main:has(.comment-card),
-main:has(form[action="/comments"]) {
-  background: linear-gradient(180deg, #F7F7F7 0%, #fff4cf 100%);
-  border-radius: 14px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
 
 .menu-section,
 .about-content,
@@ -339,24 +332,23 @@ main {
 }
 
 .comments-wrapper {
-  max-width: 800px;
-  margin: 30px auto;
+  max-width: 700px;        
+  margin: 30px auto;      
   padding: 25px;
   background-color: #10291D;
   border-radius: 14px;
+  border: 3px solid #F7C64A; 
 }
 
 .menu-page,
-.about-page,
-main:has(form[action="/comments"]) {
+.about-page {
   border: 3px solid #F7C64A;
   border-radius: 16px;
   position: relative;
 }
 
 .menu-page::before,
-.about-page::before,
-main:has(form[action="/comments"])::before {
+.about-page::before {
   content: "";
   position: absolute;
   top: -10px;
@@ -369,8 +361,7 @@ main:has(form[action="/comments"])::before {
 }
 
 .menu-page::after,
-.about-page::after,
-main:has(form[action="/comments"])::after {
+.about-page::after {
   content: "";
   position: absolute;
   bottom: -10px;
@@ -507,7 +498,7 @@ main:has(form[action="/comments"])::after {
   width: 180px;
   opacity: 0.25;
   pointer-events: none;
-  z-index: 2;   /* 👈 ADD THIS */
+  z-index: 2; 
 }
 
 .menu-page,
@@ -515,4 +506,19 @@ main:has(form[action="/comments"])::after {
 main {
   position: relative;
   z-index: 1;
+}
+
+.pagination {
+  text-align: center;
+  margin: 20px;
+  color: #F7F7F7; 
+}
+
+.pagination span {
+  color: #F7F7F7;
+  font-weight: bold;
+}
+
+.pagination a {
+  color: #F7C64A; 
 }
